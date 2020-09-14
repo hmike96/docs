@@ -43,33 +43,52 @@ Application metrics can be ingested by Kayenta to perform Canary Analysis or Aut
 | SignalFx    | All supported versions | Yes |      |
 | Stackdriver | All supported versions | Yes |      |
 
-## Artifact sources
+## Artifacts
 
-Artifacts can be referenced and used within Spinnaker pipelines. Armory Cloud supports the following artifact stores: 
+Artifacts are  deployable resources.
 
-## Artifact stores
+### Stores
 
-[![Generally available](/images/ga.svg)]({{< ref "release-definitions#ga" >}}) 
+[![Generally available](/images/ga.svg)]({{< ref "release-definitions#ga" >}})  
 
-Artifacts are remote, deployable resources in Spinnaker. Armory supports the following artifact stores:
+Armory supports the following artifact stores:
 
-| Provider                                                          | Notes                                          |
-|-------------------------------------------------------------------|---------------------------|------------------------------------------------|
-| [Bitbucket](https://spinnaker.io/setup/artifacts/bitbucket/)      |                                                |
-| [GitHub](https://spinnaker.io/setup/artifacts/github/)            |                                                |
-| [GitLab](https://spinnaker.io/setup/artifacts/gitlab/)            |                                                |
-| [Git Repo](https://spinnaker.io/setup/artifacts/gitrepo/)         | Supports using the entire repo as an artifact. |
-| [Google Cloud Storage](https://spinnaker.io/setup/artifacts/gcs/) |                                                |
-| [HTTP](https://spinnaker.io/setup/artifacts/http)                 |                                                |
-| [Maven](https://spinnaker.io/setup/artifacts/maven/)              |                                                |
-| [Oracle Object](https://spinnaker.io/setup/artifacts/oracle)      |                                                |
-| [S3](https://spinnaker.io/setup/artifacts/s3/)                    |                                                |
+| Provider                                                          | Armory                 | Notes                                                               |
+|-------------------------------------------------------------------|------------------------|---------------------------------------------------------------------|
+| [Bitbucket](https://spinnaker.io/setup/artifacts/bitbucket/)      | All supported versions |                                                                     |
+| [GitHub](https://spinnaker.io/setup/artifacts/github/)            | All supported versions |                                                                     |
+| [GitLab](https://spinnaker.io/setup/artifacts/gitlab/)            | All supported versions |                                                                     |
+| [Git Repo](https://spinnaker.io/setup/artifacts/gitrepo/)         | All supported versions | GitHub or Bitbucket. Supports using the entire repo as an artifact. |
+| [Google Cloud Storage](https://spinnaker.io/setup/artifacts/gcs/) | All supported versions |                                                                     |
+| [HTTP](https://spinnaker.io/setup/artifacts/http)                 | All supported versions |                                                                     |
+| [Maven](https://spinnaker.io/setup/artifacts/maven/)              | All supported versions |                                                                     |
+| [Oracle Object](https://spinnaker.io/setup/artifacts/oracle)      | All supported versions |                                                                     |
+| [S3](https://spinnaker.io/setup/artifacts/s3/)                    | All supported versions |                                                                     |
+
+### Types
+
+Armory supports the following artifact types:
+
+| Type                                                                                                             | Armory                 | Notes                                     |
+|------------------------------------------------------------------------------------------------------------------|------------------------|-------------------------------------------|
+| [Bitbucket file](https://www.spinnaker.io/reference/artifacts-with-artifactsrewrite/types/bitbucket-file/)       | All supported versions |                                           |
+| [Docker Image](https://spinnaker.io/reference/artifacts-with-artifactsrewrite/types/docker-image/)               | All supported versions | Can be hosted on DockerHub, GCR, ECR, etc |
+| [Embedded Base64](https://spinnaker.io/reference/artifacts-with-artifactsrewrite/types/embedded-base64/)         | All supported versions |                                           |
+| [GCS Object](https://www.spinnaker.io/reference/artifacts-with-artifactsrewrite/types/gcs-object/)               | All supported versions |                                           |
+| [Git Repo](https://www.spinnaker.io/reference/artifacts-with-artifactsrewrite/types/git-repo/)                   | All supported versions |                                           |
+| [GitHub file](https://www.spinnaker.io/reference/artifacts-with-artifactsrewrite/types/github-file/)             | All supported versions |                                           |
+| [GitLab file](https://www.spinnaker.io/reference/artifacts-with-artifactsrewrite/types/gitlab-file/)             | All supported versions |                                           |
+| [HTTP file](https://www.spinnaker.io/reference/artifacts-with-artifactsrewrite/types/http-file/)                 | All supported versions |                                           |
+| [Kubernetes object](https://www.spinnaker.io/reference/artifacts-with-artifactsrewrite/types/kubernetes-object/) | All supported versions |                                           |
+| [Maven artifact](https://www.spinnaker.io/reference/artifacts-with-artifactsrewrite/types/maven-artifact/)       | All supported versions |                                           |
+| [Oracle Object](https://www.spinnaker.io/reference/artifacts-with-artifactsrewrite/types/oracle-object/)         | All supported versions |                                           |
+| [S3 object](https://www.spinnaker.io/reference/artifacts-with-artifactsrewrite/types/s3-object/)                 | All supported versions |                                           |
 
 ## As code solutions
 
 ### Pipelines as Code
 
-[![Generally available](/images/ga.svg)]({{< ref "release-definitions#ga" >}}) ![Armory](/images/armory.svg)
+[![Generally available](/images/ga.svg)]({{< ref "release-definitions#ga" >}}) 
 
 [Pipelines as Code]({{< ref "install-dinghy" >}}) gives you the ability to manage your pipelines and their templates in source control.
 
@@ -95,7 +114,7 @@ Artifacts are remote, deployable resources in Spinnaker. Armory supports the fol
 
 ### Pipelines as CRD
 
-[![Experiment](/images/exp.svg)]({{< ref "release-definitions#experiment">}}) ![Armory](/images/armory.svg)
+[![Experiment](/images/exp.svg)]({{< ref "release-definitions#experiment">}}) 
 
 [PaCRD]({{< ref "pacrd" >}}) gives you the ability to manage your pipelines as
 Kubernetes custom resources.
@@ -108,7 +127,7 @@ Kubernetes custom resources.
 
 ### Terraform Integration
 
-[![Generally available](/images/ga.svg)]({{< ref "release-definitions#ga" >}}) ![Armory](/images/armory.svg)
+[![Generally available](/images/ga.svg)]({{< ref "release-definitions#ga" >}}) 
 
 The Terraform Integration gives you the ability to use Terraform within your Spinnaker pipelines to create your infrastructure as part of your software delivery pipeline.
 
