@@ -120,9 +120,6 @@ The following table lists the supported image bakeries:
 
 | Provider  | Notes |
 |-----------|-------|
-| AWS       |       |
-| GCE       |       |
-| OCI       |       |
 | Packer | Default image bakery for Spinnaker |
 
 
