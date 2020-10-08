@@ -250,7 +250,7 @@ docker run --name armory-halyard -it --rm \
   armory/halyard-armory:<image_version>
 ```
 
-**Note**: For image version, you must enter a valid version number, such as 1.8.1. Do not use `latest`.
+**Note**: For image version, you must enter a valid version number, such as 1.9.5. Do not use `latest`.
 
 ## Enter the Halyard container
 
